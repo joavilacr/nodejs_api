@@ -30,3 +30,23 @@ Once the Deploy in Docker has been completed, you can access the API from your w
 
 **Note**: If you are running *Docker Toolbox for Windows*, remember the IP will be <http://192.168.99.100:8089> instead of <http://localhost:8089>.
 This because Docker will run in a Linux VM VirtualBox.
+
+## How to Deploy and Run in Kubernetes as Yaml file:
+**Note**: For this use the file at ./kubernetes/nodejsapp.yaml
+
+1. Gather the Yaml file and place it anywhere in you kubernetes cluster. E.g: `git clone https://github.com/joavilacr/nodejs_api.git` then `cd ./kubernetes/`
+2. `kubectl apply -f nodejsapp.yaml`
+3. `kubectl get deployments`
+4. `kubectl get services`
+
+**Extra**: To delete the deployment run: `kubectl delete -f nodejsapp.yaml`
+
+## How to Deploy and Run in Kubernetes as Helm Chart:
+**Note**: For this use the folder ./kubernetes/chart
+
+1. You must have installed helm --> <https://helm.sh/docs/intro/install/>
+2. Gather the chart directory and place it anywhere in you kubernetes cluster. E.g: `git clone https://github.com/joavilacr/nodejs_api.git` then `cd ./kubernetes/chart/nodeserver`
+3. `helm install nodeserver .`
+4. `helm status nodeserver` to check the IP and port to access the application
+
+**Extra**: To delete the Chart run: `helm delete nodeserver`
