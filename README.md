@@ -15,7 +15,7 @@ This includes 3 APIs endpoints:
  2. `cd /dir/to/clone/this/repo`
  3. `git clone https://github.com/joavilacr/nodejs_api.git`
  4. `cd nodejs_api`
- 5. Open a console (Make sure you have docker running)
+ 5. Open a console in the current dir (Make sure you have docker running)
  6. `docker build -t joseavila/nodejs_app .`
  7. `docker run --name encry-decry -p 8089:8080 -d joseavila/nodejs_app`
  8. `docker ps`
@@ -23,10 +23,10 @@ This includes 3 APIs endpoints:
 
 ## How to use the API running from Docker:
 Once the Deploy in Docker has been completed, you can access the API from your web browser by going to:
-1. `<home>`: <http://localhost:8089/>
-2. `<encrypt API>`: <http://localhost:8089/api/encrypt>
-3. `<decrypt API>`: <http://localhost:8089/api/decrypt>
-4. `<health API>`: <http://localhost:8089/api/health>
+1. `Home`: <http://localhost:8089/>
+2. `Encrypt API`: <http://localhost:8089/api/encrypt>
+3. `Decrypt API`: <http://localhost:8089/api/decrypt>
+4. `Health API`: <http://localhost:8089/api/health>
 
 **Note**: If you are running *Docker Toolbox for Windows*, remember the IP will be <http://192.168.99.100:8089> instead of <http://localhost:8089>.
-This because the Docker will run in a Linux VM VirtualBox.
+This because Docker will run in a Linux VM VirtualBox.
